@@ -136,3 +136,9 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 .ecomvaish/user/migrations
+#Ignore pycache and migrations in all apps
+__pycache__/
+*/__pycache__/
+*/migrations/
+**/__pycache__/
+**/migrations/
