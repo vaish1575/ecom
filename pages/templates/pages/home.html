@@ -1,10 +1,27 @@
 {% extends 'base.html' %}
+
 {% block title %}Ecommerce|home{% endblock %}    
-{% block content %}    
-
-
-    <h2>Home page</h2>
-    
-
+   
+{% block content %}
+<h1>home page</h1>
+{% for item in products %}
+<div class="card" >
+    <img src="{{ item.image.url }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{ item.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{item.price}}</li>
+      
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Add to cart</a>
+      <a href="#" class="card-link">View details</a>
+    </div>
+  </div>
+{% endfor %}
 
 {% endblock %}
+
+
